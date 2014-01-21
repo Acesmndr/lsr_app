@@ -1,0 +1,84 @@
+body{
+		background-color:#222930;
+		color:white;
+		text-align:center;
+		}
+	.switchButton{
+		background-color:#2956B2;
+		border-radius:20px;
+	}
+	#timeRemain{
+		font-size:24px;
+		padding:4px;
+	}
+	.timeRemain2{
+		background-color:#7DBD00;
+		border-radius:30px;
+	}
+	
+	.timeRemain1{
+		background-color:#DD1E2F;
+		border-radius:30px;
+	}
+	#groupSelectList{
+		font-size:1.2pc;
+		padding-left:20%;
+		/*display:none;*/
+	}
+	/*#groupSelectList*/ a{
+		
+		width:70%;
+		background-color:#E15119;/*#FF5B00;*/
+		/*color:black;*/
+		border-radius:10px;
+		padding:3px;
+		border:4px solid #222930;
+		display:block;
+	}
+	.timer{
+		font-size:150%;
+		padding:12px;
+	}
+	#routineDisplay{
+		color:white;
+		/*display:none;*/
+	}
+	h2{
+	padding:4px;
+	}
+	.dev{
+	text-align:left;
+	border-radius:10px;
+	/*border:4px solid #222930;*/
+	width:50%;
+	padding:6px;
+	display:inline-block;
+	}
+	.image{
+	border-radius:5px;
+	background-color:black;
+	padding:2px;
+	padding-top:6px;
+	padding-bottom:6px;
+	display:inline-block;
+		}
+	.listed{
+	background-color:#E15119;
+	border-radius:10px;
+	}
+  	#developerList{
+	background-color:black;
+	border-radius:20px;
+	padding:10px;
+	/*display:none;*/
+	/*display:block;*/	
+}
+	.hoverToggle{
+	background:white;
+	color:#E15119;
+		}	
+	.divDisable{
+	display:none;
+	}
+
+	
