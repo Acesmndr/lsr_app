@@ -3,13 +3,13 @@ $(function() {
 	$("#routineSwitch").show("fast");
 	//$("#groupSelectList a").hover(hovered,hovered);
 	$("#groupSelectList a").click(function(evt){
-	$("#groupDisplay").html(this.id);
-	timeFlag=0;
-	theTime(this.id);
-	$("#groupSelectList").append(this);
-	$("#groupSelectSwitch").hide("fast");
-	$("#routineSwitch").show("fast");
-});	
+		$("#groupDisplay").html(this.id);
+		timeFlag=0;
+		theTime(this.id);
+		$("#groupSelectList").append(this);
+		$("#groupSelectSwitch").hide(0);
+		$("#routineSwitch").show(0);
+	});	
 //$("div[class$=sw]").click(pilikpilik);
 $("div[class$=Button]").click(pilikpilik);
 });		
@@ -17,6 +17,6 @@ $("div[class$=Button]").click(pilikpilik);
 	$(this).toggleClass("hoverToggle");
 	}*/		
 function pilikpilik(){
-	$("div[id$=Switch]").hide("fast");
-	$(this).next().show("fast");
+	$("div[id$=Switch]").hide(0);
+	$(this).next().show(0);
 }
