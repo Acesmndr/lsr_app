@@ -1,21 +1,22 @@
 $(function() {
 	theTime("Group 3");
-	$("#routineSwitch").show(750);
-	$("#groupSelectList a").hover(hovered,hovered);
-	$("a").click(function(evt){
+	$("#routineSwitch").show("fast");
+	//$("#groupSelectList a").hover(hovered,hovered);
+	$("#groupSelectList a").click(function(evt){
 	$("#groupDisplay").html(this.id);
+	timeFlag=0;
 	theTime(this.id);
-	$("#groupSelectList").prepend(this);
-	$("#groupSelectSwitch").fadeOut(500);
-	$("#routineSwitch").show(500);
+	$("#groupSelectList").append(this);
+	$("#groupSelectSwitch").hide("fast");
+	$("#routineSwitch").show("fast");
 });	
 //$("div[class$=sw]").click(pilikpilik);
 $("div[class$=Button]").click(pilikpilik);
 });		
-function hovered(){
+/*function hovered(){
 	$(this).toggleClass("hoverToggle");
-	}		
+	}*/		
 function pilikpilik(){
-	$("div[id$=Switch]").fadeOut(500);
-	$(this).next().show(500);
+	$("div[id$=Switch]").hide("fast");
+	$(this).next().show("fast");
 }

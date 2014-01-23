@@ -80,5 +80,14 @@ body{
 	.divDisable{
 	display:none;
 	}
-
+	.toggleDay{
+	position:absolute;
+	font-size:100px;
+	}
+	#prv{
+	left:8%;
+	}
+	#nxt{
+	right:8%;
+	}
 	
