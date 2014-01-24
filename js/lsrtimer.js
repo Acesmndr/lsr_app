@@ -1,16 +1,35 @@
-var arr=[[3,9,13,18],[4,10,14,19],[5,11,15,21],[6,13,17,22],[8,14,18,23],[9,15,18,23],[10,17,19,24]];
+var arr=[];
 var day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 var now=new Date();
 var today=now.getDay();
 var daytemp=0;
+var parser;
 var hrs=now.getHours();
 //if(hrs==0){hrs=24;}
 var timer_hr,grp,grp_no;
 var flag=0;
 var mn,sc,intid;
 var timeFlag=0,dayDisp,dayToggle;
-var timeTemp;
-$(function(){	
+var timeTemp,last_group;
+$(function(){
+if((typeof(Storage)!=="undefined")&&(localStorage["last_group"]!=="undefined")){
+	last_group=localStorage["last_group"];
+	last_group=parseInt(last_group);
+	if(localStorage["arr"]){	
+		arr=JSON.parse(localStorage["arr"]);
+	}
+	if(!localStorage["arr"]){
+		arr=[[3,9,13,18],[4,10,14,19],[5,11,15,21],[6,13,17,22],[8,14,18,23],[9,15,18,23],[10,17,19,24]];	
+	}
+	if(!localStorage["last_group"]){
+		last_group=3;
+	}			
+	}
+else{
+  last_group=3;
+  arr=[[3,9,13,18],[4,10,14,19],[5,11,15,21],[6,13,17,22],[8,14,18,23],[9,15,18,23],[10,17,19,24]];
+  }
+theTime("Group"+last_group);
 $("#dayDisplay").html(day[today]);
 $("#prv").click(function(){
 	timeFlag--;
@@ -29,7 +48,7 @@ $("#prv").click(function(){
 	if(dayToggle>6){
 		dayToggle=0;
 	}
-	theTime("Group "+dayToggle);
+	theTime("Group"+dayToggle);
 	});
 $("#nxt").click(function(){
 	timeFlag++;
@@ -45,13 +64,13 @@ $("#nxt").click(function(){
 	if(dayToggle<0){
 		dayToggle=6;
 	}
-	theTime("Group "+dayToggle);
+	theTime("Group"+dayToggle);
 	});
 });
 function theTime(group_catch){
 		clearInterval(intid);
 		flag=0;
-		var grp_catch = group_catch.substring(6,7);
+		var grp_catch = group_catch.substring(5,6);
 		grp=parseInt(grp_catch);
 		grp_no=grp-today-1;
 		if(grp_no<0){
@@ -104,6 +123,8 @@ function theTime(group_catch){
 	mn=60-now.getMinutes()-1;
 	if(timeFlag==0)
 	{
+		$("#groupDisplay").html("Group "+grp);
+		localStorage["last_group"]=grp;
 		$("#dayDisplay").html(day[today]);
 		//$("#timeRemain").show();
 		intid=setInterval(function(){timer(group_catch);},1000);
@@ -133,4 +154,18 @@ function timer(group_catch){
 		$("#timeRemain").html(hrtemp+" : "+mntemp+" : "+sctemp);
 		
 }
-			
+function update(){
+	$.getJSON("https://doc-0g-5c-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/0opqjm7b9fcte8k0jnpsi2ujbkojtg40/1390564800000/06285532911826694826/*/0Bz8Au1s5aGd4MXhhbDVRYjUxbms?h=16653014193614665626&e=download",function(data){
+$.each(data,function(key,val){
+	arr.push(val);
+	});
+})
+.done(function(){
+localStorage["arr"]=JSON.stringify(arr);
+alert("routine downloaded and updated");
+//theTime("Group"+last_group);
+})
+.fail(function(){
+alert("Update Failed!\nEither your browser doesn't support AJAX or localStorage or there is no network connection available!");
+});
+}			
