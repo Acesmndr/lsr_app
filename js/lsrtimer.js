@@ -9,9 +9,9 @@ var timer_hr,grp,grp_no;
 var flag=0;
 var intid;
 var sc=59;
-var mn=60-now.getMinutes()-1;
-var timeFlag=0,dayDisp,dayToggle;
-var timeTemp;
+var mn;
+var timeFlag=0,dayDisp,dayToggle,rotateFlag=0;
+var timeTemp,times,timesuffix;
 //-------------------------------------------var last_group;----------------------------moved to lsrlocal
 $(function(){
 /*if((typeof(Storage)!=="undefined")&&(localStorage["last_group"]!=="undefined")){
@@ -34,6 +34,7 @@ else{
 //--------------------------------------------------theTime("Group"+last_group);-----------------shifted to Modernizr complete
 $("#dayDisplay").html(day[today]);
 $("#prv").click(function(){
+	rotateFlag=1;
 	timeFlag--;
 	dayDisp=today+timeFlag;
 	if(timeFlag==-1){
@@ -53,6 +54,7 @@ $("#prv").click(function(){
 	theTime("Group"+dayToggle);
 	});
 $("#nxt").click(function(){
+	rotateFlag=1;
 	timeFlag++;
 		if(timeFlag==7){
 	timeFlag=0;
@@ -70,6 +72,7 @@ $("#nxt").click(function(){
 	});
 });
 function theTime(group_catch){
+		mn=60-now.getMinutes()-1;
 		clearInterval(intid);
 		flag=0;
 		var grp_catch = group_catch.substring(5,6);
@@ -81,28 +84,64 @@ function theTime(group_catch){
 		for(var i=0;i<6;i=i+2){			
 			if(arr[grp_no][i]!=undefined){
 				if(arr[grp_no][i]>12){
-					timeTemp=(arr[grp_no][i]-12)+" pm  - ";
+					timeTemp=arr[grp_no][i]-12;
+					timesuffix=" pm  - ";
 				}else{
-					timeTemp=arr[grp_no][i]+" am  - ";
+					timeTemp=arr[grp_no][i];
+					timesuffix=" am  - ";
 				}
+				if(arr[grp_no][i]%1==0.5){
+					timeTemp=Math.floor(timeTemp);
+					timesuffix=":30"+timesuffix;
+				}
+				times=timeTemp+timesuffix;
 				if(arr[grp_no][i+1]>12){
-					timeTemp=timeTemp+(arr[grp_no][i+1]-12)+" pm";
+					timeTemp=arr[grp_no][i+1]-12;
+					timesuffix=" pm ";
 				}else{
-					timeTemp=timeTemp+arr[grp_no][i+1]+" am";
-				}		
-				$("#timer"+i).html(timeTemp);
+					timeTemp=arr[grp_no][i+1];
+					timesuffix=" am ";
 				}
-			else{
+				if(arr[grp_no][i+1]%1==0.5){
+					timeTemp=Math.floor(timeTemp);
+					timesuffix=":30"+timesuffix;
+				}
+				times=times+timeTemp+timesuffix;		
+				$("#timer"+i).html(times);
+			}else{
 				$("#timer"+i).html(" ");
 			}
 			if((arr[grp_no][i]!=undefined)&&(flag==0))
 			{
 				if((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1])){
-					timer_hr=arr[grp_no][i+1]-hrs-1;
-					flag=2;			
+					if(((arr[grp_no][i]%1)==0.5)&&(mn>30)){
+						timer_hr=0;
+						mn=mn-30;
+						flag=1;
+					}else{											
+							timer_hr=arr[grp_no][i+1]-hrs-1;
+							if((arr[grp_no][i+1]%1)==0.5){
+								mn=30+mn;
+								if(mn>59){
+									timer_hr++;
+									mn-=60;
+									}
+							}
+					flag=2;
+					}
+						
+					
+								
 				}else{
 					if(hrs<arr[grp_no][i]){
 						timer_hr=arr[grp_no][i]-hrs-1;
+						if((arr[grp_no][i]%1)==0.5){
+								mn=30+mn;
+								if(mn>59){
+									timer_hr++;
+									mn-=60;
+									}
+								}
 						flag=1;
 						}	
 					}
@@ -113,8 +152,16 @@ function theTime(group_catch){
 				grp_no=7;
 			}
 			timer_hr=arr[grp_no-1][0]+24-hrs-1;
+			if((arr[grp_no-1][0]%1)==0.5){
+								mn=30+mn;
+								if(mn>59){
+									timer_hr++;
+									mn-=60;
+									}
+								}
 			flag=1;
 			}
+		timer_hr=Math.floor(timer_hr);
 		$("#timeRemain").removeClass();
 	if(flag==1){
 			$("#timeRemain").addClass("timeRemain2");
@@ -123,15 +170,17 @@ function theTime(group_catch){
 		}
 	if(timeFlag==0)
 	{
+		if(rotateFlag==0){
 		$("#groupDisplay").html("Group "+grp);
-		if(localStorageSwitch!=="undefined"){
+		if(Modernizr.localstorage){
 		localStorage["last_group"]=grp;
+		}
 		}
 		$("#dayDisplay").html(day[today]);
 		//$("#timeRemain").show();
 		intid=setInterval(function(){timer(group_catch);},1000);
 	}else{
-		$("#timeRemain").html("...");
+		$("#timeRemain").html("-");
 	}
 
 }

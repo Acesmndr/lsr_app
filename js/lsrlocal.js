@@ -1,6 +1,12 @@
 	var last_group=3;
+	var update_key;
 	var arr=[];
-	var localStorageSwitch=1;	
+	if(localStorage["update_key"]!=undefined){
+		update_key=101010;
+		localStorage["update_key"]=update_key;
+		}else{
+	update_key=localStorage["update_key"];
+	}
 	if(localStorage["arr"]!=undefined){	
 		arr=JSON.parse(localStorage["arr"]);
 	}else{
@@ -11,15 +17,24 @@
 		last_group=parseInt(last_group);			
 	}
 function update(){
-	$.getJSON("https://doc-0g-5c-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/oj5dc0vbdmj9bju2u0bi75rmb3fvdih4/1390636800000/06285532911826694826/*/0Bz8Au1s5aGd4MXhhbDVRYjUxbms?h=16653014193614665626&e=download",function(data){
+	$("#update_button").html("Updating! Please Wait");
+	$.getJSON("https://dl.dropboxusercontent.com/s/7thbqehyqwy6khk/store.json",function(data){
 	//$.getJSON("js/store.json",function(data){
+	console.log(data);
+	arr.length=0;	
 	$.each(data,function(key,val){
 	arr.push(val);
 	});
 })
 .done(function(){
+	$("#update_button").html("Check for Updates?");
 	localStorage["arr"]=JSON.stringify(arr);
-	alert("routine downloaded and updated", arr[7]);
+	if(arr[7]==update_key){
+	alert("Already Upto Date!! :)");
+	}else{
+	alert("Routine downloaded and updated");
+	localStorage["update_key"]=arr[7];
+	}
 	//theTime("Group"+last_group);
 })
 .fail(function(){

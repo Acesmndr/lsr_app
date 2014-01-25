@@ -2,7 +2,7 @@ $(function() {
 	$("#routineSwitch").show(0);
 	$("#groupSelectList a").click(function(evt){
 		//$("#groupDisplay").html(this.id);
-		timeFlag=0;
+		timeFlag=rotateFlag=0;
 		theTime(this.id);
 		//$("#groupSelectList").append(this);
 		$("#groupSelectSwitch").hide(0);
