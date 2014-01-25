@@ -7,7 +7,9 @@ var hrs=now.getHours();
 //if(hrs==0){hrs=24;}
 var timer_hr,grp,grp_no;
 var flag=0;
-var mn,sc,intid;
+var intid;
+var sc=59;
+var mn=60-now.getMinutes()-1;
 var timeFlag=0,dayDisp,dayToggle;
 var timeTemp;
 //-------------------------------------------var last_group;----------------------------moved to lsrlocal
@@ -119,8 +121,6 @@ function theTime(group_catch){
 		}else{
 			$("#timeRemain").addClass("timeRemain1");
 		}
-	sc=59;
-	mn=60-now.getMinutes()-1;
 	if(timeFlag==0)
 	{
 		$("#groupDisplay").html("Group "+grp);
