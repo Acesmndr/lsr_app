@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.lsr.webapp"
+        version     = "1.01.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>LSR</name>
+
+    <description>
+       Load Shedding Routine Application for handheld devices! 
+    </description>
+
+    <author href="https://build.phonegap.com" email="support@phonegap.com">
+        Aashish Manandhar
+	Aayush Rijal
+	Abhishek Khatri
+	Ankit Shrestha 
+    </author>
+	
+	<preference name="phonegap-version"  value="2.9.0" />
+	<preference name="orientation"  value="default" /> 
+	<preference name="disable-cursor" value="true" />
+
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	 		
+</widget>
