@@ -71,13 +71,13 @@ section{
 	word-spacing: 2px;
 	}
 .time{
-	font-size: 200%;
+	font-size: 220%;
 	font-family: sans;
 	color: rgba(0,0,0,0.6);
 	padding: 5px 0 5px 0;
 	}
 .on_off{
-	font-size: 120%;
+	font-size: 110%;
 	font-family: sans;
 	color: rgba(0,0,0,0.7);
 	display: inline;
@@ -91,7 +91,7 @@ section{
 	word-spacing: 2px;
 	}
 .username{
-	font-size: 110%;
+	font-size: 100%;
 	font-family: sans;
 	color: rgba(500,110,0,0.8);
 	display: inline;
@@ -101,10 +101,12 @@ section{
 	display: inline;
 }
 .showtime{
-	background:#ccc;
+	background:#344;
 	font-size: 120%;
 	font-family: sans;
-	color: rgba(0,0,0,0.5);
+	color: rgba(455,455,455,1);
 	word-spacing: 2px;	
-	padding: 10px 0 0px 5px;
+	padding-top: 10px;
+	padding-left: 20px;
+	margin-left: 40px;
 }
