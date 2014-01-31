@@ -14,6 +14,7 @@ header{
 	height: 0;
 	border: 1px solid green;
 	margin: -10px -10px;
+	width: auto;
 	}
 .listIcon{
 	margin: 5px 2px 10px 0;
@@ -29,7 +30,7 @@ header{
 	}
 
 nav{
-	margin: 20px 1px -30px 1px;
+	margin: 20px 1px 10px 1px;
 	float: right;
 	}	
 
@@ -45,7 +46,7 @@ nav{
 	border: 0px solid #34495e;
 	background: #fff;
 	width: 50px;
-	height: 900px;
+	height: 500px;
 	float: left;
 	position: relative;
 	box-shadow: 2px 3px 2px grey; 
@@ -59,38 +60,38 @@ nav{
 	padding: 7px;
 	}
 section{
-	margin-top: 50px;
+	margin-top: 80px;
 	transform: translateX(50px);
 	}
 .info,.location,.group_no,.current_day, .username{
-	font-size: 100%;
+	font-size: 120%;
 	font-family: sans;
 	color: rgba(0,0,0,0.4);
 	display: inline;
 	word-spacing: 2px;
 	}
 .time{
-	font-size: 190%;
+	font-size: 200%;
 	font-family: sans;
 	color: rgba(0,0,0,0.6);
 	padding: 5px 0 5px 0;
 	}
 .on_off{
-	font-size: 95%;
+	font-size: 120%;
 	font-family: sans;
 	color: rgba(0,0,0,0.7);
 	display: inline;
 	word-spacing: 2px;
 	}
 .current_day{
-	font-size: 110%;
+	font-size: 130%;
 	font-family: sans;
 	color: rgba(0,119,114,0.5);
 	display: inline;
 	word-spacing: 2px;
 	}
 .username{
-	font-size: 98%;
+	font-size: 110%;
 	font-family: sans;
 	color: rgba(500,110,0,0.8);
 	display: inline;
@@ -99,11 +100,11 @@ section{
 #showtime{
 	display: inline;
 }
-#showtime .showtime{
+.showtime{
 	background:#ccc;
-	font-size: 100%;
+	font-size: 120%;
 	font-family: sans;
 	color: rgba(0,0,0,0.5);
 	word-spacing: 2px;	
-	padding-left: 5%
+	padding: 10px 0 0px 5px;
 }
