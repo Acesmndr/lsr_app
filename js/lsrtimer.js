@@ -10,7 +10,7 @@ var timer_hr,grp,grp_no;
 var flag=0;
 var intid;
 var sc=59;
-var mn;
+var mn=60-now.getMinutes()-1;
 $(".current_day").html(", "+now.getDate()+"<sup>st</sup> "+month[now.getMonth()]+" "+now.getFullYear());
 var timeFlag=0,dayDisp,dayToggle,rotateFlag=0;
 var timeTemp,times,timesuffix;
@@ -74,7 +74,7 @@ $("#nxt").click(function(){
 	});
 });
 function theTime(group_catch){
-		mn=60-now.getMinutes()-1;
+		console.log(mn);
 		clearInterval(intid);
 		flag=0;
 		var grp_catch = group_catch.substring(5,6);
@@ -183,25 +183,26 @@ function theTime(group_catch){
 		}
 		$("#dayDisplay").html(day[today]);
 		//$("#timeRemain").show();
-		intid=setInterval(function(){timer(group_catch);},1000);
+		intid=setInterval(function(){timer();},1000);
 	}else{
 		$("#timeRemain").html("-");
 	}
 
 }
-function timer(group_catch){
+function timer(){
 	sc--;
 	if(sc<0){
-		sc=59;
 		mn--;
+		sc=59;
 		if(mn<0){
-			mn=59;
 			timer_hr--;
+			mn=59;
 			if(timer_hr<0){
-				clearInterval(intid);
-				theTime(group_catch);
+				theTime("Group"+grp);
 				}
+			
 			}
+		
 		}
 		var mntemp,sctemp,hrtemp;
 		(timer_hr<10)?(hrtemp="0"+timer_hr):(hrtemp=timer_hr);
