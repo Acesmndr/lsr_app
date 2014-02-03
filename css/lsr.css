@@ -64,7 +64,7 @@ section{
 	margin-top: 80px;
 	margin-left: 50px;
 	margin-right: -10px;
-/*	display:none;*/
+	display:none;
 	}
 section .info,.location,.group_no,.current_day, .username{
 	font-size: 120%;
@@ -108,26 +108,31 @@ section #showtime .showtime{
 	word-spacing: 2px;	
 	padding-top: 10px;
 	padding-left: 20px;
-
 }
 
 #community{
 	margin-top: 80px;
 	margin-left: 50px;
-	display: none;
+/*	display: none;*/
 	}
-#community .weekday{
-	outline: 1px solid green;
-	color: rgba(0,119,114,0.7);
+#community .groupNumber{
+	color: rgba(425,425,425,0.7);
 	display: inline-block;
-	padding: 5px;
+	padding: 0;
+	font-family: arial;
+	font-size: 20px;
 	}
 #community .schedule{
-	outline: 1px solid green;
-	padding: 25px;
+	border: 1px solid #344;
+	background: #344;
+	border-radius: 50px 0 0 50px;
 	margin-top: 10px;
+	margin-right: -10px;
+	padding: 10px 0 10px 20px;
 	display: inline-block;
-	color: #344;
-	font-family: calibri;
+	color: #fff;
+	font-family: arial;
+	float: right;
+	width: 95%;
 	}
 
