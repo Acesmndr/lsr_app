@@ -10,8 +10,20 @@ $(function() {
 	});	
 $("div[class$=Button]").click(pilikpilik);
 $("#update_button").click(update);
+$("#communityicon").click(function(){
+	$("#home").hide(0);
+	$("#community").show(0);
+});
+$("#homeicon").click(function(){
+	$("#community").hide(0);
+	$("#home").show(0);
+});
+$(".listIcon").click(function(){
+	$("#list").toggle(200);
+	});
 });		
 function pilikpilik(){
 	$("div[id$=Switch]").hide(0);
 	$(this).next().show(0);
 }
+
