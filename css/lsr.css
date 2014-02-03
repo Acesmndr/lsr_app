@@ -61,10 +61,10 @@ nav{
 	}
 section{
 	overflow: hidden;
-	margin-top: 50px;
+	margin-top: 60px;
 	margin-left: 50px;
 	margin-right: -10px;
-	display:none;
+/*	display:none;*/
 	}
 section .info,.location,.group_no,.current_day, .username{
 	font-size: 120%;
@@ -109,11 +109,13 @@ section #showtime .showtime{
 	padding-top: 10px;
 	padding-left: 20px;
 }
-
+/*section #showtime .tomorrow{
+	display: inline-block;
+	}*/
 #community{
-	margin-top: 50px;
+	margin-top: 60px;
 	margin-left: 50px;
-/*	display: none;*/
+	display: none;
 	}
 #community .groupNumber{
 	color: rgba(425,425,425,1);
