@@ -4,20 +4,19 @@ header{
 
 .vrline1{
 	font-size: 45px;
-	height: 40px;
+	height: 50px;
 	border: 1px solid green;
-	margin: -10px 10px 5px 10px;
+	margin: -10px 10px -4px 10px;
 	display: inline-block;
 	}
 
 #hrline1{
 	height: 0;
 	border: 1px solid green;
-	margin: -10px -10px;
 	width: auto;
 	}
 .listIcon{
-	margin: 5px 2px 10px 0;
+	margin: 5px 2px 4px 0;
 	cursor: hand;
 	cursor: pointer;
 	}
@@ -44,63 +43,64 @@ nav{
 	}
 #list{
 	border: 0px solid #34495e;
-	background: #fff;
-	width: 50px;
-	height: 500px;
+	background: rgba(0,0,0,0.5);
+	width: 100px;
+	min-height: 100%;
+	height: auto;
 	float: left;
-	position: relative;
+	position: absolute;
 	box-shadow: 2px 3px 2px grey; 
 	margin-left: -10px;
-	margin-top: 0px;
-	
+	margin-top: -10px;
+	position: top;
+/*	display: none;*/
 	}
-.info_img{
-	opacity: 0.5;
-	position: absolute;
-	padding: 7px;
+#list .list_img{
+	padding: 20px 0 0 35px;
+	opacity: 1;
 	}
 section{
+	overflow: hidden;
 	margin-top: 80px;
-	transform: translateX(50px);
+	margin-left: 50px;
+	margin-right: -10px;
+/*	display:none;*/
 	}
-.info,.location,.group_no,.current_day, .username{
+section .info,.location,.group_no,.current_day, .username{
 	font-size: 120%;
 	font-family: sans;
 	color: rgba(0,0,0,0.4);
 	display: inline;
 	word-spacing: 2px;
 	}
-.time{
+section .time{
 	font-size: 220%;
 	font-family: sans;
 	color: rgba(0,0,0,0.6);
 	padding: 5px 0 5px 0;
 	}
-.on_off{
+section .on_off{
 	font-size: 110%;
 	font-family: sans;
 	color: rgba(0,0,0,0.7);
 	display: inline;
 	word-spacing: 2px;
 	}
-.current_day{
+section .current_day{
 	font-size: 130%;
 	font-family: sans;
-	color: rgba(0,119,114,0.5);
+	color: rgba(0,119,114,0.7);
 	display: inline;
 	word-spacing: 2px;
+	overflow: hidden;
 	}
-.username{
+section .username{
 	font-size: 100%;
 	font-family: sans;
 	color: rgba(500,110,0,0.8);
-	display: inline;
 	word-spacing: 2px;
 	}
-#showtime{
-	display: inline;
-}
-.showtime{
+section #showtime .showtime{
 	background:#344;
 	font-size: 120%;
 	font-family: sans;
@@ -108,5 +108,26 @@ section{
 	word-spacing: 2px;	
 	padding-top: 10px;
 	padding-left: 20px;
-	margin-left: 40px;
+
 }
+
+#community{
+	margin-top: 80px;
+	margin-left: 50px;
+	display: none;
+	}
+#community .weekday{
+	outline: 1px solid green;
+	color: rgba(0,119,114,0.7);
+	display: inline-block;
+	padding: 5px;
+	}
+#community .schedule{
+	outline: 1px solid green;
+	padding: 25px;
+	margin-top: 10px;
+	display: inline-block;
+	color: #344;
+	font-family: calibri;
+	}
+
