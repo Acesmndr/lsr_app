@@ -1,5 +1,5 @@
 header{
-	margin: -5px -10px 10px -10px;
+	margin: -5px -8px 10px -10px;
 	}
 
 .vrline1{
@@ -14,6 +14,11 @@ header{
 	height: 0;
 	border: 1px solid green;
 	width: auto;
+	}
+#hrline2{
+	border: 0.4px solid #ccc;
+	width: 100%;
+	height: 0;
 	}
 .listIcon{
 	margin: 5px 2px 4px 0;
@@ -65,7 +70,7 @@ section{
 	overflow: hidden;
 	margin-top: 20px;
 	margin-left: 50px;
-	margin-right: -10px;
+	margin-right: -8px;
 /*	display: none;*/
 	}
 section .info,.location,.group_no,.current_day, .username{

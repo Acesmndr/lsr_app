@@ -1,25 +1,27 @@
 #aboutapp{
-	margin: -15px -10px 0 -10px;
+	margin: -18px -10px -10px -10px;
 	background: rgba(0,0,0,0.7);
-	height: 39em;
 	display: none;
 	}
 .appinfo,.apptitle{
-	font-size: 15px;
+	font-size: 18px;
 	font-family: arial;
 	color: #fff;	
 	}
 .appinfo{
 	padding-top: 30px;
+	padding-bottom: 10px;
 	text-align: center;
 	}
 .apptitle{
-	margin: 10px 0 2px 40px;
+	text-align: center;
+	margin: 10px 0 2px 0;
 	font-weight: bold;
 	color: rgba(500,110,0,0.8);
+	padding-top: 10px;
 	}
 .aboutlist{
-	font-size: 12px;
+	font-size: 15px;
 	font-family: arial;
 	color: #fff;
 	display: inline-block;
