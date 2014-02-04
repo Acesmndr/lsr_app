@@ -1,0 +1,17 @@
+#setting{
+	margin-top: 20px;
+	display: none;
+	}
+form{
+	text-align: center;
+	}
+label{
+	font: small-caps 15px arial;
+	color: #344;
+	}
+.namefield{
+	border: 0px solid #ccc;
+	box-shadow: 0 2px 0 #ccc;
+	border-radius: 5px;
+	text-align: center;
+	}

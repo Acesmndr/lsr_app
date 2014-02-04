@@ -1,0 +1,60 @@
+
+#community{
+	margin-top: 20px;
+	display: none;
+	}
+#community .groupNav{
+	border: 1px solid #344;
+	margin: 10px -10px 5px -10px;
+	font-family: arial;
+	background: #344;
+	text-align: center;
+	}
+#community .groupNumber{
+	border: 1px solid #fff;
+	color: #fff;
+	display: inline-block;
+	font-family: arial;
+	font-size: 20px;
+	margin: 1% 0.3% 1% 0.3%;
+	padding: 2px 7px;
+	cursor: pointer;
+	cursor: hand;
+	}
+.remainingtime{
+	font-size: 10px;
+	color: #fff;
+	}
+.timeColor{
+	border: 2px solid #0f0;
+	margin: 2px 0 7px 9px;
+	width: 5px;
+	box-shadow: 1px 2px 3px 3px #0f0;
+	}
+#routine{
+	margin-top: 20px; 
+/*	display: none;*/
+	}
+.weekDay{
+	font: small-caps 20px arial;
+	color: rgba(0,119,114,0.7);
+	padding: 3px;
+	display: inline;
+	float: left;
+	margin: 3px 0 2px 70px;
+	}
+.whattime{
+	display: inline-block;
+	font: small-caps 15px arial;
+	color: #aaa;
+	margin: 1px 0 1px 20px;
+	text-align: center;
+	}
+#hrColor{
+	border: 0.4px solid #ccc;
+	width: 80%;
+	-webkit-width: 80%;
+	-chrome-width: 80%;
+	-webkit-border: 0.4px solid #ccc;
+	-chrome-border: 0.4px solid #ccc;
+	}
