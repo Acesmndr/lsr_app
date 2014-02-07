@@ -35,7 +35,8 @@ else{
   }*/
 //--------------------------------------------------theTime("Group"+last_group);-----------------shifted to Modernizr complete
 $("#dayDisplay").html(day[today]);
-$("#prv").click(function(){
+//previous and next function
+/*$("#prv").click(function(){
 	rotateFlag=1;
 	timeFlag--;
 	dayDisp=today+timeFlag;
@@ -71,14 +72,14 @@ $("#nxt").click(function(){
 		dayToggle=6;
 	}
 	theTime("Group"+dayToggle);
-	});
+	});*/
 });
 function theTime(group_catch){
-		console.log(mn);
 		clearInterval(intid);
-		flag=0;
+		//flag=0;
 		var grp_catch = group_catch.substring(5,6);
 		grp=parseInt(grp_catch);
+		flag=0;
 		grp_no=grp-today-1;
 		if(grp_no<0){
 				grp_no=7+grp_no;
@@ -164,13 +165,13 @@ function theTime(group_catch){
 			flag=1;
 			}
 		timer_hr=Math.floor(timer_hr);
-		$("#timeRemain").removeClass();
+		//$("#timeRemain").removeClass();
 	if(flag==1){
-			$("#timeRemain").addClass("timeRemain2");
+			//$("#timeRemain").addClass("timeRemain2");
 			$("on_off").html("Lights On");
 			
 		}else{
-			$("#timeRemain").addClass("timeRemain1");
+			//$("#timeRemain").addClass("timeRemain1");
 			$("on_off").html("Lights Off")
 		}
 	if(timeFlag==0)
@@ -195,6 +196,7 @@ function timer(){
 		mn--;
 		sc=59;
 		if(mn<0){
+			hrs++;
 			timer_hr--;
 			mn=59;
 			if(timer_hr<0){
@@ -211,4 +213,102 @@ function timer(){
 		$("#timeRemain").html(hrtemp+" : "+mntemp+" : "+sctemp);
 		
 }
-
+function weekSchedule(){
+for(var j=0;j<=7;j++)
+{
+	grp_no=grp-j-1;
+		if(grp_no<0){
+				grp_no=7+grp_no;
+				}
+	flag=0;
+	for(var i=0;i<6;i=i+2){			
+			if(arr[grp_no][i]!=undefined){
+				if(arr[grp_no][i]>12){
+					timeTemp=arr[grp_no][i]-12;
+					timesuffix=" pm  - ";
+				}else{
+					timeTemp=arr[grp_no][i];
+					timesuffix=" am  - ";
+				}
+				if(arr[grp_no][i]%1==0.5){
+					timeTemp=Math.floor(timeTemp);
+					timesuffix=":30"+timesuffix;
+				}
+				times=timeTemp+timesuffix;
+				if(arr[grp_no][i+1]>12){
+					timeTemp=arr[grp_no][i+1]-12;
+					timesuffix=" pm ";
+				}else{
+					timeTemp=arr[grp_no][i+1];
+					timesuffix=" am ";
+				}
+				if(arr[grp_no][i+1]%1==0.5){
+					timeTemp=Math.floor(timeTemp);
+					timesuffix=":30"+timesuffix;
+				}
+				times=times+timeTemp+timesuffix;		
+				$("#time"+j+"_"+i).html(times);
+			}else{
+				$("#time"+j+"_"+i).html(" ");
+			}
+			if((arr[grp_no][i]!=undefined)&&(flag==0))
+			{
+				if((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1])){
+					if(((arr[grp_no][i]%1)==0.5)&&(mn>30)){
+						timer_hr=0;
+						mn=mn-30;
+						flag=1;
+					}else{											
+							timer_hr=arr[grp_no][i+1]-hrs-1;
+							console.log(arr[grp_no][i+1],"=array",timer_hr);
+							if((arr[grp_no][i+1]%1)==0.5){
+								mn=30+mn;
+								if(mn>59){
+									timer_hr++;
+									mn-=60;
+									}
+							}
+					flag=2;
+					}
+						
+					
+								
+				}else{
+					if(hrs<arr[grp_no][i]){
+						timer_hr=arr[grp_no][i]-hrs-1;
+						if((arr[grp_no][i]%1)==0.5){
+								mn=30+mn;
+								if(mn>59){
+									timer_hr++;
+									mn-=60;
+									}
+								}
+						flag=1;
+						}	
+					}
+			}	
+		}
+		if(flag==0){
+			if((grp_no-1)==-1){
+				grp_no=7;
+			}
+			timer_hr=arr[grp_no-1][0]+24-hrs-1;
+			if((arr[grp_no-1][0]%1)==0.5){
+								mn=30+mn;
+								if(mn>59){
+									timer_hr++;
+									mn-=60;
+									}
+								}
+			flag=1;
+			}
+		timer_hr=Math.floor(timer_hr);
+		var mntemp,hrtemp;
+		(timer_hr<10)?(hrtemp="0"+timer_hr):(hrtemp=timer_hr);
+		(mn<10)?(mntemp="0"+mn):(mntemp=mn);
+		console.log(grp_no);
+		console.log(timer_hr);
+		$("#remTime"+j).html(hrtemp+" : "+mntemp);
+	}
+}
+	

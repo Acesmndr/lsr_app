@@ -11,6 +11,7 @@ $(function() {
 $("div[class$=Button]").click(pilikpilik);
 $("#updateIcon").click(update);
 $("#communityicon").click(function(){
+	weekSchedule();
 	$("#home").hide(0);
 	$("#community").show(0);
 	$("#aboutapp").hide(0);
@@ -38,6 +39,13 @@ $("#settingIcon").click(function(){
 $(".listIcon").click(function(){
 	$("#list").toggle(200);
 	});
+$(".groupNumber").click(function(){
+	var group_catch=this.id;
+	console.log(group_catch);
+	group_catch=group_catch.charAt(group_catch.length-1);
+	grp=parseInt(group_catch);
+	weekSchedule();
+});
 });		
 function pilikpilik(){
 	$("div[id$=Switch]").hide(0);
