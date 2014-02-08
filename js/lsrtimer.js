@@ -6,7 +6,7 @@ var daytemp=0;
 var parser;
 var hrs=now.getHours();
 //if(hrs==0){hrs=24;}
-var timer_hr,grp,grp_no;
+var timer_hr,timer_hrtemp,grp,grp_no;
 var flag=0;
 var intid;
 var sc=59;
@@ -214,6 +214,7 @@ function timer(){
 		
 }
 function weekSchedule(){
+var tempo=grp-2;
 for(var j=0;j<=7;j++)
 {
 	grp_no=grp-j-1;
@@ -255,16 +256,16 @@ for(var j=0;j<=7;j++)
 			{
 				if((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1])){
 					if(((arr[grp_no][i]%1)==0.5)&&(mn>30)){
-						timer_hr=0;
+						timer_hrtemp=0;
 						mn=mn-30;
 						flag=1;
 					}else{											
-							timer_hr=arr[grp_no][i+1]-hrs-1;
-							console.log(arr[grp_no][i+1],"=array",timer_hr);
+							timer_hrtemp=arr[grp_no][i+1]-hrs-1;
+							console.log(arr[grp_no][i+1],"=array",timer_hrtemp);
 							if((arr[grp_no][i+1]%1)==0.5){
 								mn=30+mn;
 								if(mn>59){
-									timer_hr++;
+									timer_hrtemp++;
 									mn-=60;
 									}
 							}
@@ -275,11 +276,11 @@ for(var j=0;j<=7;j++)
 								
 				}else{
 					if(hrs<arr[grp_no][i]){
-						timer_hr=arr[grp_no][i]-hrs-1;
+						timer_hrtemp=arr[grp_no][i]-hrs-1;
 						if((arr[grp_no][i]%1)==0.5){
 								mn=30+mn;
 								if(mn>59){
-									timer_hr++;
+									timer_hrtemp++;
 									mn-=60;
 									}
 								}
@@ -292,23 +293,32 @@ for(var j=0;j<=7;j++)
 			if((grp_no-1)==-1){
 				grp_no=7;
 			}
-			timer_hr=arr[grp_no-1][0]+24-hrs-1;
+			timer_hrtemp=arr[grp_no-1][0]+24-hrs-1;
 			if((arr[grp_no-1][0]%1)==0.5){
 								mn=30+mn;
 								if(mn>59){
-									timer_hr++;
+									timer_hrtemp++;
 									mn-=60;
 									}
 								}
 			flag=1;
 			}
-		timer_hr=Math.floor(timer_hr);
+		timer_hrtemp=Math.floor(timer_hrtemp);
 		var mntemp,hrtemp;
-		(timer_hr<10)?(hrtemp="0"+timer_hr):(hrtemp=timer_hr);
+		//(timer_hrtemp<10)?(hrtemp="0"+timer_hrtemp):(hrtemp=timer_hrtemp);
+		hrtemp=timer_hrtemp;
 		(mn<10)?(mntemp="0"+mn):(mntemp=mn);
-		console.log(grp_no);
-		console.log(timer_hr);
-		$("#remTime"+j).html(hrtemp+" : "+mntemp);
+		if(flag==2){
+		$("#timeColor"+tempo).addClass("timeColored");
+		}else{
+		$("#timeColor"+tempo).addClass("timeColor");
+		}
+		$("#remTime"+tempo).html(hrtemp+"h"+mntemp);
+		tempo--;
+		if(tempo<0){
+			tempo+=7;
+		}
+		
 	}
 }
 	
