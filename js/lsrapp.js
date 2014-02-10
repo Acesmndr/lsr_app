@@ -1,5 +1,5 @@
 $(function() {
-	$("#routineSwitch").show(0);
+	/*$("#routineSwitch").show(0);
 	$("#groupSelectList a").click(function(evt){
 		//$("#groupDisplay").html(this.id);
 		timeFlag=rotateFlag=0;
@@ -8,7 +8,7 @@ $(function() {
 		$("#groupSelectSwitch").hide(0);
 		$("#routineSwitch").show(0);
 	});	
-$("div[class$=Button]").click(pilikpilik);
+$("div[class$=Button]").click(pilikpilik);*/
 $("#updateIcon").click(update);
 $("#communityicon").click(function(){
 	weekSchedule();
@@ -39,8 +39,8 @@ $(".groupNumber").click(function(){
 	weekSchedule();
 });
 });		
-function pilikpilik(){
+/*function pilikpilik(){
 	$("div[id$=Switch]").hide(0);
 	$(this).next().show(0);
-}
+}*/
 

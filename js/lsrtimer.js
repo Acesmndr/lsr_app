@@ -214,7 +214,7 @@ function timer(){
 		
 }
 function weekSchedule(){
-var tempo=grp-2;
+var tempo=grp+today;
 for(var j=0;j<=7;j++)
 {
 	grp_no=grp-j-1;
@@ -309,13 +309,13 @@ for(var j=0;j<=7;j++)
 		hrtemp=timer_hrtemp;
 		(mn<10)?(mntemp="0"+mn):(mntemp=mn);
 		if(flag==2){
-		$("#timeColor"+tempo).addClass("timeColored");
+		$("#timeColor"+tempo).removeClass().addClass("timeColored");
 		}else{
-		$("#timeColor"+tempo).addClass("timeColor");
+		$("#timeColor"+tempo).removeClass().addClass("timeColor");
 		}
 		$("#remTime"+tempo).html(hrtemp+"h"+mntemp);
 		tempo--;
-		if(tempo<0){
+		if(tempo<1){
 			tempo+=7;
 		}
 		
