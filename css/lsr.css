@@ -5,14 +5,14 @@ header{
 .vrline1{
 	font-size: 45px;
 	height: 50px;
-	border: 1px solid green;
+	border: 1px solid rgba(0,119,114,0.5);
 	margin: -10px 10px -4px 10px;
 	display: inline-block;
 	}
 
 #hrline1{
 	height: 0;
-	border: 1px solid green;
+	border: 1px solid rgba(0,119,114,0.5);
 	width: auto;
 	}
 #hrline2{
@@ -62,7 +62,7 @@ nav{
 	}
 #list .list_img{
 	padding: 20px 0 0 35px;
-	opacity: 1;
+	opacity: 0.8;
 	cursor: hand;
 	cursor: pointer;
 	}

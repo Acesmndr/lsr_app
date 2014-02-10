@@ -4,56 +4,52 @@
 	display: none;
 	}
 #community .groupNav{
-	border: 1px solid #344;
 	margin: -20px -8px 5px -8px;
 	font-family: arial;
-	background: rgba(0,0,0,0.7);
 	text-align: center;
 	}
 #community .groupNumber{
-	border: 1px solid #fff;
-	color: #fff;
 	display: inline-block;
 	font-family: arial;
 	font-size: 25px;
-	margin: 3% 0.5% 1% 0.5%;
-	padding: 2px 3px;
+	margin: 1% 0.5% 1% 0.5%;
+	padding: 2px 1.5px;
 	cursor: pointer;
 	cursor: hand;
+	color: rgba(0,0,0,0.5);
 	}
+.vrline2{
+	height: 30px;
+	border: 1px solid #ccc;
+	margin: auto;
+	display: inline-block;
+}
 .remainingtime{
 	font-size: 13px;
-	color: #fff;
+	color: rgba(0,0,0,0.5);
+	margin: 2px auto;
 	}
 .timeColor{
-	border: 2px solid #0f0;
-	margin: 5px 0 7px 0;
+	margin: 7px auto;
 	width: 30px;
-	box-shadow: 1px 2px 3px 3px #0f0;
+	box-shadow: 1px 1px 1px 2px #0f0;
 	}
 .timeColored{
-	border: 2px solid red;
-	margin: 5px 0 7px 0;
+	margin: 7px auto;
 	width: 30px;
-	box-shadow: 1px 2px 3px 3px red;
+	box-shadow: 1px 1px 1px 2px #f00;
 	}
 #routine{
-	margin: 10px -7px;
-
-/*	display: none;*/
+	margin: 20px auto;
 	}
-.weekDay{
+#routine .weekDay{
 	font: small-caps 20px arial;
 	color: rgba(0,119,114,0.7);
 	padding: 3px;
 	display: inline;
-	float: left;
-	margin: 3px 0 2px 70px;
 	}
-.whattime{
+#routine .whattime{
 	display: inline-block;
 	font: small-caps 15px arial;
 	color: #aaa;
-	margin: 5px 0 5px 20px;
-	text-align: center;
 	}
