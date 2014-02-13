@@ -40,4 +40,13 @@ function update(){
 .fail(function(){
 	alert("Update Failed!\nEither your browser doesn't support AJAX or localStorage or there is no network connection available!");
 });
+}
+function formupdate(){
+	if($("#usrname").val()){
+		localStorage["usrname"]=$("#usrname").val();
+	}else{
+		localStorage["usrname"]="friend";
+	}	
+	localStorage["last_group"]=$("#usrgrpselect").val();
+	theTime(localStorage["last_group"]);
 }			

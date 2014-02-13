@@ -38,6 +38,10 @@ $(".groupNumber").click(function(){
 	grp=parseInt(group_catch);
 	weekSchedule();
 });
+$("#usrform").submit(function(){
+	formupdate();
+	return false;
+});
 });		
 /*function pilikpilik(){
 	$("div[id$=Switch]").hide(0);

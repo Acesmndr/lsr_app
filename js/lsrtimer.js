@@ -75,10 +75,12 @@ $("#nxt").click(function(){
 	});*/
 });
 function theTime(group_catch){
+		$("#username").html(" "+localStorage["usrname"]);
 		clearInterval(intid);
 		//flag=0;
 		var grp_catch = group_catch.substring(5,6);
 		grp=parseInt(grp_catch);
+		$(".group_no").html("Group "+grp);
 		flag=0;
 		grp_no=grp-today-1;
 		if(grp_no<0){
@@ -313,7 +315,7 @@ for(var j=0;j<=7;j++)
 		}else{
 		$("#timeColor"+tempo).removeClass().addClass("timeColor");
 		}
-		$("#remTime"+tempo).html(hrtemp+"h"+mntemp);
+		$("#remTime"+tempo).html(hrtemp+"h "+mntemp);
 		tempo--;
 		if(tempo<1){
 			tempo+=7;
