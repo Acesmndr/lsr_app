@@ -16,7 +16,7 @@
 	padding: 2px 1.5px;
 	cursor: pointer;
 	cursor: hand;
-	color: rgba(0,0,0,0.5);
+	color: #456;
 	}
 .vrline2{
 	height: 30px;
@@ -32,24 +32,33 @@
 .timeColor{
 	margin: 7px auto;
 	width: 30px;
+	border: 1px solid #0f0;
 	box-shadow: 1px 1px 1px 2px #0f0;
 	}
 .timeColored{
 	margin: 7px auto;
 	width: 30px;
+	border: 1px solid #f00;
 	box-shadow: 1px 1px 1px 2px #f00;
 	}
 #routine{
-	margin: 20px auto;
+	margin-top: 30px;
+	}	
+.table{
+	margin: 10px auto;
+	width: 170px;
 	}
 #routine .weekDay{
-	font: small-caps 20px arial;
+	vertical-align: middle;
+	font: small-caps 160% arial;
 	color: rgba(0,119,114,0.7);
-	padding: 3px;
 	display: inline;
+	padding-right: 30px;
 	}
 #routine .whattime{
+	vertical-align: middle;
 	display: inline-block;
 	font: small-caps 15px arial;
 	color: #aaa;
+	padding-left: 3px;
 	}

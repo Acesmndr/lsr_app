@@ -3,12 +3,12 @@
 	background: rgba(0,0,0,0.7);
 	display: none;
 	}
-.appinfo,.apptitle{
+.appinfo,.apptitle, .icon_name{
 	font-size: 18px;
 	font-family: arial;
 	color: #fff;	
 	}
-.appinfo{
+.appinfo, .icon_name{
 	padding-top: 30px;
 	padding-bottom: 10px;
 	text-align: center;
@@ -33,3 +33,14 @@ li{
 .link{
 	color: rgba(0,119,114,0.7);
 	}
+.about_icon{
+	margin-left: 120px;
+	margin-right: 20px;
+	width: 40px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon_name{
+	display: inline-block;
+}
+
