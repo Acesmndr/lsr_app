@@ -217,6 +217,9 @@ function timer(){
 }
 function weekSchedule(){
 var tempo=grp+today;
+if(tempo>6){
+	tempo=tempo-7;
+}
 for(var j=0;j<=7;j++)
 {
 	grp_no=grp-j-1;
