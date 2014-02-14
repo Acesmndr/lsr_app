@@ -75,7 +75,6 @@ $("#nxt").click(function(){
 	});*/
 });
 function theTime(group_catch){
-		$("#username").html(" "+localStorage["usrname"]);
 		clearInterval(intid);
 		//flag=0;
 		var grp_catch = group_catch.substring(5,6);
@@ -170,17 +169,18 @@ function theTime(group_catch){
 		//$("#timeRemain").removeClass();
 	if(flag==1){
 			//$("#timeRemain").addClass("timeRemain2");
-			$("on_off").html("Lights On");
+			$(".on_off").html("Light");
 			
 		}else{
 			//$("#timeRemain").addClass("timeRemain1");
-			$("on_off").html("Lights Off")
+			$(".on_off").html("Powercut")
 		}
 	if(timeFlag==0)
 	{
 		if(rotateFlag==0){
 		$("#groupDisplay").html("Group "+grp);
 		if(Modernizr.localstorage){
+		$("#username").html(" "+localStorage["usrname"]);
 		localStorage["last_group"]=grp;
 		}
 		}
