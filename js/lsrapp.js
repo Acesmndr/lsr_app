@@ -27,7 +27,10 @@ $("#settingIcon").click(function(){
 	$(".selectDiv").hide(0);
 	$("#setting").show(0);
 	});
-
+$("#developersIcon").click(function(){
+	$(".selectDiv").hide(0);
+	$("#developers").show(0);
+	});
 $(".listIcon").click(function(){
 	$("#list").toggle(200);
 	});

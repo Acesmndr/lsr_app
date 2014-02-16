@@ -20,11 +20,11 @@
 	<div id='hrline1' />
 	</header>
 	<div id='list' class='selectDiv'>
-		<div class='list_img'><img src='images/search.png' height='23px' width='24px' /></div>
+<!--		<div class='list_img'><img src='images/search.png' height='23px' width='24px' /></div>-->
 		<div class='list_img' id='updateIcon'><img src='images/download.png' height='27px' width='27px' /></div>
 		<div class='list_img' id='settingIcon'><img src='images/setting.png' height='27px' width='27px' /></div>
-		<div class='list_img' id='infoIcon'><img src='images/developers.png' height='27px' width='27px' /></div>
 		<div class='list_img' id='infoIcon'><img src='images/info4.png' height='31px' width='31px' /></div>
+		<div class='list_img' id='developersIcon'><img src='images/developers.png' height='27px' width='27px' /></div>
 	</div>
 	<section id='home' class='selectDiv'>
 	<div class='info'>Hi<div id='username' class='username'> Friend<!--Provide user name here!!!--></div>!! You have</div>
@@ -146,10 +146,11 @@
 		
 	</div>
 	<div id='setting' class='selectDiv'>
+		<div class='settingTitle'>Setting</div>
 		<div class='profile'>
 			<form action='' method='post' id='usrform'>
-				<label for='Name'>Name </label><input type='text' class='namefield' title='name' id='usrname' /><br><br>
-				<label for='group'>Group </label>
+				<label for='Name'>name </label><input type='text' class='namefield' title='name' id='usrname' /><br><br>
+				<label for='group'>group </label>
 				<select name='group' id='usrgrpselect'>
 					<option value='1'>1</option>
 					<option value='2'>2</option>
@@ -163,26 +164,49 @@
 				<input type="submit" name="submit" value="Save">
 			</form> 
 		</div>
-	</div>
-	<div id='developers'>
+		<div class='appinfo'>LSR V 1.0.1</div>
 	</div>
 	<div id='aboutapp' class='selectDiv'>
+		<div class='aboutTitle'>About App</div>
 		<div class='aboutmain'>
 			<p class='appinfo'>Let there be light</p>
 			<hr>
 			<div class='apptitle'>Whats new!!!</div>
 			<ul class='aboutlist'>
 			<em>
-				<li>Just create your personal profile for any place you want.</li>
-				<li>Why look only for a single place or group, view multiple groups at the same instance.</li>
+				<li>Just create your personal home profile for any group you want.<img class='about_icon'src='images/home.png' height='40px' width='40px' /></li>
+				<li>Access the routines of all groups at the community profile.<img class='about_icon' src='images/community.png' height='40px' width='40px' /></li>
 				<li>See the schedule for all of the 7 groups at once.</li>
 			</em>
 			</ul>
-		<div class='about_icon'><img src='images/home.png' height='40px' width='40px' /></div><div class='icon_name'>= Home</div><br>
-		<div class='about_icon'><img src='images/community.png' height='40px' width='40px' /></div><div class='icon_name'>= Community</div>
 		</div>
 		<hr>
 		<p class='appinfo'>To check for latest version of this app <br><a class='link' href='http://build.phonegap.com/apps/744573' target="_blank">Click here</a></p>
+		<div class='appinfo'>LSR V 1.0.1</div>
+	</div>
+	<div id='developers' class='selectDiv'>
+		<div class='developersTitle'>Developers</div>
+		<div class='us'>
+			<div class='devBlock'>
+				<div class='name'>Aashish Manandhar</div>
+				<a class='contact' href='http://about.me/acesmndr' target='_blank'>about.me/acesmndr</a>
+			</div>
+			<div class='devBlock'>
+				<div class='name'>Aayush Rijal</div>
+				<a class='contact' href='http://about.me/aayushrijal' target='_blank'>about.me/aayushrijal</a>
+			</div>
+			<div class='devBlock'>
+				<div class='name'>Abhishek Khatri</div>
+				<a class='contact' href='http://about.me/acesmndr' target='_blank'>about.me/acesmndr</a>
+			</div>
+			<div class='devBlock'>
+				<div class='name'>Ankit Shrestha</div>
+				<a class='contact' href='http://about.me/shresthaankit' target='_blank'>about.me/shresthaankit</a>
+			</div>
+		</div>
+		<img class='logo' src='images/developers.png' height='150px' width='150px' />
+		<hr>
+		<p class='inquiry'>Plese do feel free to contact us for any <strong>Feedback/Suggestion/Query</strong>.</p><hr>
 		<div class='appinfo'>LSR V 1.0.1</div>
 	</div>
 <script type="text/javascript" src='js/jquery-1.10.2.min.js'></script>
