@@ -1,7 +1,26 @@
 var day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 var month=["January","February","March","April","May","June","July","August","September","October","November","December"];
+var ss;
 var now=new Date();
 var today=now.getDay();
+var todate=now.getDate();
+if(todate/10==1){
+	ss="th";
+}else{
+	if(todate%10==1){
+		ss="st";
+	}else{
+	if(todate%10==2){
+		ss="nd";
+	}else{
+	if(todate%10==3){
+		ss="rd";
+	}else{
+	ss="th";
+	}
+	}
+	}	
+}	
 var daytemp=0;
 var parser;
 var hrs=now.getHours();
@@ -11,7 +30,8 @@ var flag=0;
 var intid;
 var sc=59;
 var mn=60-now.getMinutes()-1;
-$(".current_day").html(", "+now.getDate()+"<sup>st</sup> "+month[now.getMonth()]+" "+now.getFullYear());
+
+$(".current_day").html(", "+todate+"<sup>"+ss+"</sup> "+month[now.getMonth()]+" "+now.getFullYear());
 var timeFlag=0,dayDisp,dayToggle,rotateFlag=0;
 var timeTemp,times,timesuffix;
 //-------------------------------------------var last_group;----------------------------moved to lsrlocal
@@ -114,7 +134,7 @@ function theTime(group_catch){
 				$("#timer"+i).html(times);
 			}else{
 				$("#timer"+i).html(" ");
-			}
+				}
 			if((arr[grp_no][i]!=undefined)&&(flag==0))
 			{
 				if((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1])){

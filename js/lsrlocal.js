@@ -10,7 +10,7 @@
 	if(localStorage["arr"]!=undefined){	
 		arr=JSON.parse(localStorage["arr"]);
 	}else{
-		arr=[[3,9,12,18],[4,10,14,20],[5,11,16,21],[6,13,17,22],[7,14,18,23],[9,16,19,24],[10,17,20,1]];	
+		arr=[[3,9,12,18],[4,10,14,20],[5,12,16,21],[6,13,17,22],[7,14,18,23],[9,16,19,24],[10,17,20,1]];	
 	}
 	if(localStorage["last_group"]){
 		last_group=localStorage["last_group"];
