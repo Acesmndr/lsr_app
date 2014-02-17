@@ -1,7 +1,7 @@
 	var last_group=3;
 	var update_key;
 	var arr=[];
-	if(localStorage["update_key"]!=undefined){
+	if(!localStorage["update_key"]){
 		update_key="a01";
 		localStorage["update_key"]=update_key;
 		}else{
@@ -16,6 +16,13 @@
 		last_group=localStorage["last_group"];
 		last_group=parseInt(last_group);			
 	}
+	if(!localStorage["usrname"]){
+		localStorage["usrname"]=" ";
+		alert("Greetings! Please provide the app with your name and group number!");
+		$(".selectDiv").hide(0);
+		$("#setting").show(0);
+	}
+
 function update(){
 	$("#update_button").html("Updating! Please Wait");
 	$.getJSON("https://dl.dropboxusercontent.com/s/7thbqehyqwy6khk/store.json",function(data){
