@@ -189,11 +189,13 @@ function theTime(group_catch){
 		//$("#timeRemain").removeClass();
 	if(flag==1){
 			//$("#timeRemain").addClass("timeRemain2");
-			$(".on_off").html("Light");
+			$("#powercolor").html("Light");
+			$("#powercolor").addClass("on_off1");
 			
 		}else{
 			//$("#timeRemain").addClass("timeRemain1");
-			$(".on_off").html("Powercut")
+			$("#powercolor").html("Powercut");
+			$("#powercolor").addClass("on_off2");
 		}
 	if(timeFlag==0)
 	{
