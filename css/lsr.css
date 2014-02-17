@@ -104,17 +104,17 @@ section .on_off{
 	}
 section .current_day{
 	font-size: 110%;
-	color: rgba(0,119,114,0.7);
+	color: rgba(0,119,114,0.9);
 	display: inline;
 	word-spacing: 2px;
 	overflow: hidden;
 	}
 section .username{
 	font-size: 100%;
-	color: rgba(500,110,0,0.8);
+	color: rgba(0,119,114,0.9);
 	word-spacing: 2px;
 	}
-section #showtime .showtime{
+section #showtime{
 	background:#344;
 	font-size: 120%;
 	font-family: sans;
@@ -122,4 +122,13 @@ section #showtime .showtime{
 	word-spacing: 2px;	
 	padding-top: 5px;
 	padding-left: 20px;
+	padding-bottom: 5px;
+}
+#showtime .today{
+	display: inline-block;
+	}
+#showtime .tomorrow{
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
 }

@@ -1,24 +1,33 @@
 #aboutapp{
 	margin: -10px -8px -8px -10px;
-	background: rgba(0,0,0,0.7);
+	background: #ccc;
 	display: none;
 	}
 .aboutTitle{
 	border-top: 3px solid rgba(0,119,114,0.9);
 	font: small-caps 18px sans;
-	color: rgba(500,110,0,0.8);
+	color: rgba(0,119,114,0.9);
 	margin: 0 auto;
 	width: 92px;
 	padding-top: 5px;
 	}
 .appinfo,.apptitle, .icon_name{
 	font-size: 18px;
-	font-family: arial;
-	color: #fff;	
+	font-family: sans;
+	color: #344;	
 	}
-.appinfo, .icon_name{
+.appname{
+	font-size: 17px;
+	font-family: sans;
+	color: #456;
 	padding-top: 30px;
 	padding-bottom: 10px;
+	text-align: center;
+	word-spacing: 10px;
+	font-weight: bold;
+	}
+.appinfo{
+	padding-bottom: 5px;
 	text-align: center;
 	}
 .apptitle{
@@ -30,7 +39,7 @@
 .aboutlist{
 	font-size: 15px;
 	font-family: arial;
-	color: #fff;
+	color: #344;
 	display: inline-block;
 	}
 li{

@@ -1,13 +1,13 @@
 #developers{
 	margin: -10px -8px -8px -8px;
-	background: rgba(0,0,0,0.7);
+	background: #ccc;
 	height: auto;
 	display: none;
 	}
 .developersTitle{
 	border-top: 3px solid rgba(0,119,114,0.9);
 	font: small-caps 18px sans;
-	color: rgba(500,110,0,0.8);
+	color: rgba(0,119,114,0.9);
 	margin: 0 auto;
 	width: 97px;
 	}
@@ -24,18 +24,18 @@
 .name{
 	font-family: arial;
 	font-size: 16px;
-	color: #fff;
+	color: #344;
 	}
 .contact{
 	font-family: arial;
 	font-size: 13px;
-	color: #fff;
-	text-decoration: underline;
+	color: #344;
+	text-decoration: none;
 	font-style: italic;
 	}
 .inquiry{
 	font-size: 14px;
-	color: #fff;
+	color: #344;
 	font-family: sans;
 	text-align: center;
 	display: block;
