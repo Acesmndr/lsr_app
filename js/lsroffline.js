@@ -4,6 +4,6 @@ function update(){
 	alert("The update functionality is not possible in your device as it doesn't support localStorage! Please visit our website for the updated version if it is available!");
 	}
 function formupdate(){
-	update();
+	alert("Sorry,This feature isn't available as your browser doesn't support Local Storage!!");
 	return false;
 }

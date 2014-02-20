@@ -22,7 +22,6 @@
 		$(".selectDiv").hide(0);
 		$("#setting").show(0);
 	}
-
 function update(){
 	$("#update_button").html("Updating! Please Wait");
 	$.getJSON("https://dl.dropboxusercontent.com/s/7thbqehyqwy6khk/store.json",function(data){

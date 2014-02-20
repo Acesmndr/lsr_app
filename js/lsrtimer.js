@@ -190,12 +190,12 @@ function theTime(group_catch){
 	if(flag==1){
 			//$("#timeRemain").addClass("timeRemain2");
 			$("#powercolor").html("Light");
-			$("#powercolor").addClass("on_off1");
+			$("#powercolor").removeClass().addClass("on_off1");
 			
 		}else{
 			//$("#timeRemain").addClass("timeRemain1");
 			$("#powercolor").html("Powercut");
-			$("#powercolor").addClass("on_off2");
+			$("#powercolor").removeClass().addClass("on_off2");
 		}
 	if(timeFlag==0)
 	{

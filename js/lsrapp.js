@@ -19,6 +19,10 @@ $("#homeicon").click(function(){
 	$(".selectDiv").hide(0);
 	$("#home").show(0);
 	});
+$(".title").click(function(){
+	$(".selectDiv").hide(0);
+	$("#home").show(0);
+	});
 $("#infoIcon").click(function(){
 	$(".selectDiv").hide(0);
 	$("#aboutapp").show(0);
@@ -32,7 +36,7 @@ $("#developersIcon").click(function(){
 	$("#developers").show(0);
 	});
 $(".listIcon").click(function(){
-	$("#list").toggle(200);
+	$("#list").toggle(0);
 	});
 $(".groupNumber").click(function(){
 	var group_catch=this.id;

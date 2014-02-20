@@ -40,3 +40,7 @@
 	text-align: center;
 	display: block;
 }
+.logo{
+	bottom: 35px;
+	position:relative;
+}
