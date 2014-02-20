@@ -1,4 +1,4 @@
-$(function() {
+//$(function() {
 	/*$("#routineSwitch").show(0);
 	$("#groupSelectList a").click(function(evt){
 		//$("#groupDisplay").html(this.id);
@@ -49,9 +49,5 @@ $("#usrform").submit(function(){
 	formupdate();
 	return false;
 });
-});		
-/*function pilikpilik(){
-	$("div[id$=Switch]").hide(0);
-	$(this).next().show(0);
-}*/
+//});		
 
