@@ -7,9 +7,7 @@ function formupdate(){
 	alert("Sorry,This feature isn't available as your browser doesn't support Local Storage!!");
 	return false;
 }
-$(function(){
-	weekSchedule();
-	$("#showSchedule"+grp).addClass("groupNumberActive");
-	$(".selectDiv").hide(0);
-	$("#community").show(0);
-});
+$(".selectDiv").hide(0);
+$("#community").show(0);
+weekSchedule();
+$("#showSchedule"+grp).addClass("groupNumberActive");
