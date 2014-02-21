@@ -7,11 +7,8 @@ function formupdate(){
 	return false;
 }
 $(function(){
-	function(){
 	weekSchedule();
 	$("#showSchedule"+grp).addClass("groupNumberActive");
-	weekSchedule();
 	$(".selectDiv").hide(0);
 	$("#community").show(0);
-	}
-});
+	});
