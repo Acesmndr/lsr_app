@@ -18,6 +18,9 @@
 	cursor: hand;
 	color: #456;
 	}
+#community .groupNumberActive{
+	border-bottom: 3px solid #456;
+	}
 .vrline2{
 	height: 30px;
 	border: 1px solid #ccc;
@@ -42,7 +45,11 @@
 	box-shadow: 1px 1px 1px 2px rgba(187, 7, 7, 0.94);
 	}
 #routine{
-	margin-top: 30px;
+	margin: 30px;
+	}	
+.table{
+	margin: 0 auto;
+	width: 210px;
 	}	
 
 #routine .weekDay{
@@ -58,6 +65,5 @@
 	display: inline-block;
 	color: #456;
 	text-align: center;
-	margin-left: 70px;
-	width: 100px;
+	width: 120px;
 	}

@@ -12,6 +12,7 @@ $("div[class$=Button]").click(pilikpilik);*/
 $("#updateIcon").click(update);
 $("#communityicon").click(function(){
 	weekSchedule();
+	$("#showSchedule"+grp).addClass("groupNumberActive");
 	$(".selectDiv").hide(0);
 	$("#community").show(0);
 	});
@@ -40,6 +41,8 @@ $(".listIcon").click(function(){
 	});
 $(".groupNumber").click(function(){
 	var group_catch=this.id;
+	$(".groupNumber").removeClass("groupNumberActive");
+	$(this).addClass("groupNumberActive");
 	console.log(group_catch);
 	group_catch=group_catch.charAt(group_catch.length-1);
 	grp=parseInt(group_catch);

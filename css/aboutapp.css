@@ -5,10 +5,11 @@
 	}
 .aboutTitle{
 	border-top: 3px solid rgba(0,119,114,0.9);
-	font: small-caps 18px sans;
+	font-size: 18px;
+	font-family: sans;
 	color: rgba(0,119,114,0.9);
 	margin: 0 auto;
-	width: 84px;
+	width: 93px;
 	padding-top: 5px;
 	}
 .appinfo,.apptitle, .icon_name{
