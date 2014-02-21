@@ -12,14 +12,15 @@
 	display: inline-block;
 	font-family: arial;
 	font-size: 25px;
-	margin: 1% 0.5% 1% 0.5%;
+	margin: 1% 0.1%;
 	padding: 2px 1.5px;
 	cursor: pointer;
 	cursor: hand;
 	color: #456;
 	}
 #community .groupNumberActive{
-	border-bottom: 3px solid #456;
+	font-size: 32px;
+	border-top: 3px solid #8e9476;
 	}
 .vrline2{
 	height: 30px;
@@ -29,7 +30,7 @@
 }
 .remainingtime{
 	font-size: 13px;
-	color: rgba(0,0,0,0.5);
+	color: #456;
 	margin: 2px auto;
 	}
 .timeColor{
