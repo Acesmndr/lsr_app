@@ -2,7 +2,7 @@
 	var update_key;
 	var arr=[];
 	if(!localStorage["update_key"]){
-		update_key="a01";
+		update_key="a02";
 		localStorage["update_key"]=update_key;
 		}else{
 	update_key=localStorage["update_key"];

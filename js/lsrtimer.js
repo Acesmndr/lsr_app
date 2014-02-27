@@ -137,13 +137,18 @@ function theTime(group_catch){
 				}
 			if((arr[grp_no][i]!=undefined)&&(flag==0))
 			{
-				if((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1])){
+				if(((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1]))||((hrs>=arr[grp_no][i])&&(arr[grp_no][i+1]<4))){
+					console.log(arr[grp_no][i]);
 					if(((arr[grp_no][i]%1)==0.5)&&(mn>30)){
 						timer_hr=0;
 						mn=mn-30;
 						flag=1;
 					}else{											
 							timer_hr=arr[grp_no][i+1]-hrs-1;
+							console.log("timer_hr",timer_hr);	
+							if(timer_hr<0){
+								timer_hr+=24;
+								}
 							if((arr[grp_no][i+1]%1)==0.5){
 								mn=30+mn;
 								if(mn>59){
@@ -281,13 +286,17 @@ for(var j=0;j<=7;j++)
 			}
 			if((arr[grp_no][i]!=undefined)&&(flag==0))
 			{
-				if((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1])){
+				if(((hrs>=arr[grp_no][i])&&(hrs<arr[grp_no][i+1]))||((hrs>=arr[grp_no][i])&&(arr[grp_no][i+1]<4))){
 					if(((arr[grp_no][i]%1)==0.5)&&(mn>30)){
 						timer_hrtemp=0;
 						mn=mn-30;
 						flag=1;
 					}else{											
 							timer_hrtemp=arr[grp_no][i+1]-hrs-1;
+							if(timer_hrtemp<0){
+								timer_hrtemp+=24;
+								}
+							
 							console.log(arr[grp_no][i+1],"=array",timer_hrtemp);
 							if((arr[grp_no][i+1]%1)==0.5){
 								mn=30+mn;

@@ -7,8 +7,11 @@ function formupdate(){
 	alert("Sorry,This feature isn't available as your browser doesn't support Local Storage!!");
 	return false;
 }
+$(function(){
+grp=3;		
 weekSchedule();
 $("#showSchedule"+grp).addClass("groupNumberActive");
 $(".selectDiv").hide(0);
 $("#community").show(0);
+});
 
