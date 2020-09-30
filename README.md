@@ -1,4 +1,4 @@
-lsr_app
+Hit app
 =======
 
 The application version of the Load_Shedding weppage with a completely different layout!
